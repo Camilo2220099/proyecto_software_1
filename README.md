@@ -70,7 +70,7 @@ npm install
 # MONGODB_URI=<tu_uri_de_mongodb>
 
 # Iniciar el servidor
-npm start
+node App.js
 ```
 
 **Ejemplos de configuración de MongoDB:**
@@ -172,12 +172,6 @@ src/
 | `PUT` | `/products-cart/:productId?query=add\|del` | Modifica cantidad |
 | `DELETE` | `/products-cart/:productId` | Elimina producto del carrito |
 | `DELETE` | `/cart` | Vacía todo el carrito |
-
-### 🔐 Autenticación
-| Método | Endpoint | Descripción |
-|--------|----------|-------------|
-| `POST` | `/auth/login` | Autentica administrador |
-| `POST` | `/auth/validate-token` | Valida token existente |
 
 ## ⚠️ Notas Importantes
 
