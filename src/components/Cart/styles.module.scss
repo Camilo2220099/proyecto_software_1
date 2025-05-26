@@ -1,0 +1,128 @@
+.cartContainer {
+  width: 100vw;
+  height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  font-family: Roboto;
+
+  .buttonCartContainer {
+    position: relative;
+    cursor: pointer;
+    z-index: 2;
+
+    svg {
+      height: 25px;
+      margin-right: 2px;
+    }
+
+    .buttonCart {
+      background-color: #222222;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 999px;
+    }
+
+    .productsNumber {
+      height: 20px;
+      width: 20px;
+      border-radius: 999px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: #fb3939;
+      font-size: 12px;
+      font-weight: bold;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .cart {
+    position: absolute;
+    margin-top: 10px;
+    margin-right: 20px;
+    border-radius: 30px;
+    width: min(90vw, 400px);
+    background-color: #222222;
+    color: white;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 35px;
+    }
+
+    .cartVacio {
+      text-align: center;
+      margin-top: 5px;
+      font-size: 14px;
+    }
+
+    .total {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    .productsContainer {
+      max-height: 200px;
+      overflow-y: auto;
+      margin-top: 5px;
+      width: 100%;
+      padding: 0 10px;
+    }
+
+    .buttonClearContainer {
+      margin: 10px 0 20px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .clearCartButton {
+    background-color: #ff4d4f;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+
+    &:hover {
+      background-color: #d9363e;
+    }
+
+    &:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+  width: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #797979;
+  border-radius: 20px;
+}

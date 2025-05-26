@@ -1,0 +1,128 @@
+.productAdmin {
+  padding: 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 200px;
+  max-width: 1200px;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 40%;
+    min-width: 300px;
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #4caf50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #45a049;
+      }
+
+      &:nth-child(5) {
+        background-color: #f44336;
+        &:hover {
+          background-color: #d32f2f;
+        }
+      }
+    }
+  }
+
+  .productList {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: calc(90vh - 150px);
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease;
+    width: 60%;
+    min-width: 400px;
+
+    &:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .productItem {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+
+      .productDetails {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        max-width: 70%;
+
+        .productName {
+          margin: 0;
+          font-size: 16px;
+          font-weight: 500;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .productPrice {
+          margin: 0;
+          font-size: 14px;
+          color: #555;
+        }
+      }
+
+      .actionButtons {
+        display: flex;
+        gap: 10px;
+
+        button {
+          padding: 5px 10px;
+          font-size: 14px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+
+          &:first-child {
+            background-color: #2196f3;
+            color: white;
+            &:hover {
+              background-color: #1976d2;
+            }
+          }
+
+          &:last-child {
+            background-color: #f44336;
+            color: white;
+            &:hover {
+              background-color: #d32f2f;
+            }
+          }
+        }
+      }
+    }
+  }
+}
